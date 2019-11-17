@@ -1,0 +1,6 @@
+{
+  "short_name": "Lyrical",
+  "name": "Lyrical Client",
+  "start_url": ".",
+  "display": "standalone"
+}
