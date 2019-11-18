@@ -43,7 +43,7 @@ class InfoPage extends React.Component {
           <br />
           {currentTrack.album.name}
         </p>
-        {!embedded.startsWith("<span") ? (
+        {!embedded.startsWith("<div") ? (
           embedded.split("\n").map(function(item, idx) {
             return (
               <span key={idx}>
