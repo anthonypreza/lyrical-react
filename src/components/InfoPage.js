@@ -75,6 +75,15 @@ class InfoPage extends React.Component {
             </p>
           </div>
         )}
+        <iframe
+          title="play"
+          src={"https://open.spotify.com/embed/track/" + currentTrack.id}
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe>
       </Jumbotron>
     ) : (
       <Container style={{ marginTop: 30 }}>

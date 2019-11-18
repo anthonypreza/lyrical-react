@@ -64,20 +64,15 @@ const Home = ({ currentUser, topTracks }) => {
       Header: "Play",
       Cell: ({ row }) => {
         return row ? (
-          <div className="audio">
-            <audio controls name="media">
-              <source type="audio/mpeg" src={row.original.preview_url} />
-            </audio>
-            <Button style={{ backgroundColor: "green" }}>
-              <a
-                target="_other"
-                style={{ color: "#fff", textDecoration: "none" }}
-                href={row.original.external_urls.spotify}
-              >
-                Listen on Spotify
-              </a>
-            </Button>{" "}
-          </div>
+          <iframe
+            title="play"
+            src={"https://open.spotify.com/embed/track/" + row.original.id}
+            width="300"
+            height="80"
+            frameborder="0"
+            allowtransparency="true"
+            allow="encrypted-media"
+          ></iframe>
         ) : null;
       }
     },
@@ -85,7 +80,7 @@ const Home = ({ currentUser, topTracks }) => {
       Header: "Genius",
       Cell: ({ row }) => {
         return row ? (
-          <Link to={`/genius/${row.original.id}`}>View Lyrics</Link>
+          <Link to={`/genius/${row.original.id}`}>View lyrics</Link>
         ) : null;
       }
     }
