@@ -17,7 +17,7 @@ class InfoPage extends React.Component {
   componentDidMount() {
     const { currentTrack } = this.props;
     axios
-      .post(API_URL + "get_lyrics", {
+      .post(API_URL + "/get_lyrics", {
         track_name: currentTrack.name,
         artists: currentTrack.artists
       })
