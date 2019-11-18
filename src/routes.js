@@ -36,7 +36,7 @@ function AuthenticatedRoute({
         ) : (
           <Redirect
             to={{
-              pathname: process.env.REACT_APP_PUBLIC_URL + "/login",
+              pathname: "/login",
               state: { from: routeProps.location }
             }}
           />
@@ -56,7 +56,7 @@ export default ({
   <HashRouter>
     <AuthenticatedRoute
       exact
-      path={process.env.REACT_APP_PUBLIC_URL + "/"}
+      path="/"
       component={Home}
       authenticated={authenticated}
       currentUser={currentUser}
@@ -67,7 +67,7 @@ export default ({
       ? topTracks.items.map(dat => (
           <AuthenticatedRoute
             exact
-            path={process.env.REACT_APP_PUBLIC_URL + `/genius/${dat.id}`}
+            path={`/genius/${dat.id}`}
             key={dat.id}
             component={InfoPage}
             authenticated={authenticated}
@@ -80,7 +80,7 @@ export default ({
       : null}
     <Route
       exact
-      path={process.env.REACT_APP_PUBLIC_URL + "/login"}
+      path="/login"
       render={routeProps => (
         <Login
           {...routeProps}

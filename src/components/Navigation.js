@@ -3,15 +3,10 @@ import { Navbar, NavLink, NavbarBrand, Nav, NavItem, Button } from "reactstrap";
 
 const Navigation = ({ logout }) => (
   <Navbar color="dark" dark expand="md">
-    <NavbarBrand href={process.env.REACT_APP_PUBLIC_URL + "/"}>
-      Lyrical
-    </NavbarBrand>
+    <NavbarBrand href="/">Lyrical</NavbarBrand>
     <Nav className="ml-auto" navbar>
       <NavItem>
-        <NavLink
-          href={process.env.REACT_APP_PUBLIC_URL + "/"}
-          style={{ color: "#fff", paddingRight: 30 }}
-        >
+        <NavLink href="/" style={{ color: "#fff", paddingRight: 30 }}>
           Home
         </NavLink>
       </NavItem>
