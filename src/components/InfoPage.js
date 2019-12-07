@@ -36,7 +36,7 @@ class InfoPage extends React.Component {
 		const { currentTrack } = this.props;
 		const { loading, embedded } = this.state;
 		return currentTrack && !loading ? (
-			<Jumbotron style={{ backgroundColor: '#fff' }}>
+			<Jumbotron className="text-white" style={{ backgroundColor: 'inherit' }}>
 				<h1>{currentTrack.name}</h1>
 				<p className="lead">
 					{currentTrack.artists[0].name}
@@ -80,8 +80,8 @@ class InfoPage extends React.Component {
 			</Jumbotron>
 		) : (
 			<Container style={{ marginTop: 30 }}>
-				<p className="lead">Calling Genius...</p>
-				<Spinner />
+				<p className="text-white lead">Calling Genius...</p>
+				<Spinner className="text-white" />
 			</Container>
 		);
 	}

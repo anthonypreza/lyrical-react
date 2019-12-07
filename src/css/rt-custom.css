@@ -1,0 +1,10 @@
+.ReactTable .rt-thead {
+    border-bottom: 2px solid #8e8e00;
+    color: #fffa27;
+    border-radius: 5px;
+}
+
+.ReactTable .-pagination .-btn {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1)
+}

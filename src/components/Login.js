@@ -97,7 +97,6 @@ export default class Login extends React.Component {
 					display: 'flex',
 					justifyContent: 'center',
 					alignItems: 'center',
-					backgroundColor: '#333',
 					height: '100vh',
 					width: '100vw',
 					margin: 0,

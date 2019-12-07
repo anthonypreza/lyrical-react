@@ -38,7 +38,7 @@ const Home = ({ currentUser, topTracks }) => {
 			sortable: false,
 			Cell: ({ row }) => {
 				return row ? (
-					<Link className="text-info" to={`/genius/${row._original.id}`}>
+					<Link className="text-muted" to={`/genius/${row._original.id}`}>
 						View lyrics
 					</Link>
 				) : null;
@@ -47,7 +47,7 @@ const Home = ({ currentUser, topTracks }) => {
 	];
 
 	return (
-		<Jumbotron style={{ backgroundColor: '#fff' }}>
+		<Jumbotron className="text-white" style={{ backgroundColor: 'inherit' }}>
 			<h1>Hey, {currentUser ? currentUser.display_name.split(' ')[0] : null}! </h1>
 			<p className="lead">How about some music?</p>
 			<p>

@@ -3,6 +3,7 @@ import Routes from './routes';
 
 const axios = require('axios');
 
+const API_URL = process.env.REACT_APP_API_URL;
 const BASE_URL = 'https://api.spotify.com/v1';
 const AUTH_HEADERS = (token) => {
 	return { Authorization: `Bearer ${token}` };
@@ -76,6 +77,14 @@ class App extends React.Component {
 		});
 	};
 
+	getWordCloud = async () => {
+		const { topTracks } = this.state;
+		let res = await axios.post(API_URL + '/wordcloud', {
+			top_tracks: topTracks.items
+		});
+		return res;
+	};
+
 	render() {
 		const { authenticated, currentUser, topTracks } = this.state;
 		return (
@@ -86,6 +95,7 @@ class App extends React.Component {
 					setCurrentUser={this.setCurrentUser}
 					topTracks={topTracks}
 					logout={this.logout}
+					getWordCloud={this.getWordCloud}
 				/>
 			</div>
 		);
